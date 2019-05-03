@@ -1,1 +1,22 @@
-<p>hello world</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E_journal管理サイト</title>
+</head>
+<body>
+  <h1 style="text-align: center;">E_journal</h1>
+  <div style="width: 70%;margin: 0px auto;">
+    <hr />
+    {% for contents in content %}
+    <div>
+      <h3>{{ contens.title }}</h3>
+      <div>{{ contents.text | truncatechars:100 }}</div>
+      <div style="text-align: right;">
+        <a href="{% url 'E_journal:detail' content_id=contents.id %}">記事を読む</a>
+      </div>
+    </div>
+    <hr />
+    {% endfor %}
+  </div>
+</body>
+</html>
