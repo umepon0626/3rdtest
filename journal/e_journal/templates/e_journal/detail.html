@@ -2,3 +2,6 @@
 {{ content.text }}
 {{ content.created_datetime }}
 {{ content.updated_datetime }}
+<form method='post' action ='{%url "E_journal:delete_journal" content.id%}'>{% csrf_token %}
+    <button class ="btn" type='submit' onclick = 'return confirm("本当に削除しますか？");'>削除</button>
+</form>

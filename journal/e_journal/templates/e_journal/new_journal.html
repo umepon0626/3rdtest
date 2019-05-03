@@ -1,8 +1,8 @@
 <div>
-  <a href="{% url 'e_journal:index' %}">ホームに戻る</a>
+  <a href="{% url 'E_journal:index' %}">ホームに戻る</a>
 </div>
 
-<form action="{% url 'e_journal:new_journal' %}" method="POST">{% csrf_token %}
+<form action="{% url 'E_journal:new_journal' %}" method="POST">{% csrf_token %}
   {{ form.as_p }}
   <button type="submit" class="btn">保存</button>
 </form>
