@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>E_journal管理サイト</title>
-</head>
-<body>
-  <h1 style="text-align: center;">E_journal</h1>
-  <div style="width: 70%;margin: 0px auto;">
+{% extends "base.html" %}
+
+{% block body %}
+<div class='container'>
     <hr />
     {% for contents in content %}
-    <div>
+    <div class='jumbotron'>
       <h3>{{ contens.title }}</h3>
       <div>{{ contents.text | truncatechars:100 }}</div>
       <div style="text-align: right;">
@@ -17,6 +13,5 @@
     </div>
     <hr />
     {% endfor %}
-  </div>
-</body>
-</html>
+</div>    
+{% endblock %}

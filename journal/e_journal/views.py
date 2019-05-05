@@ -15,12 +15,12 @@ def detail(request,content_id):
 
 def new_journal(request):
     if request.method == 'POST':
-        form = journal_form(request.POST)
+        form = journal_form(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect('E_journal:index')
     else:
-        form = journal_form
+        form = journal_form()
     return render(request,'e_journal/new_journal.html',{'form':form})
 
 
