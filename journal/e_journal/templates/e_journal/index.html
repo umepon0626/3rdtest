@@ -2,10 +2,11 @@
 
 {% block body %}
 <div class='container'>
+ <a class="btn btn-primary btn-lg px-4" href="{%url 'E_journal:new_journal'%}">add new</a>
     <hr />
     {% for contents in content %}
     <div class='jumbotron'>
-      <h3>{{ contens.title }}</h3>
+      <div>{{ contens.title }}</div>
       <div>{{ contents.text | truncatechars:100 }}</div>
       <div style="text-align: right;">
         <a href="{% url 'E_journal:detail' content_id=contents.id %}">記事を読む</a>

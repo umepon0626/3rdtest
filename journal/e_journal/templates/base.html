@@ -1,12 +1,28 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css">
+div.header{
+    background-color:white;
+    height: 10%;
+}
+a.title{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 250%;
+
+}
+/* a.btn{
+    height: 70%;
+    padding-top: 10px
+} */
+</style>
 </head>
 <body>
-<div class = 'container'>
+<div class = 'container-fluid'>
     <div class="row header">
-        <a class="title" href="{%url 'E_journal:index'%}">ELECTRONIC JOURNAL</a>
-        <a class="btn" href="{%url 'E_journal:new_journal'%}">add new journal</a>
+        <a class="title col-md-8" href="{%url 'E_journal:index'%}">ELECTRONIC JOURNAL</a>
     </div>
 </div>
 {% block body %}
